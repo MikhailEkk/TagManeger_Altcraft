@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Простая страница</title>
+  <script>
+    (function (window, document, dataLayerName, containerID) {
+        window[dataLayerName] = window[dataLayerName] || [];
+        window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
+        var firstScript = document.getElementsByTagName('script')[0];
+        var script = document.createElement('script');
+        var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
+        script.async = true;
+        script.src = 'https://cookiesaver.marketing-platform.devel:27443/actm/js/actm.js?id=' + containerID + dl;
+        script.type = 'module';
+        if (firstScript && firstScript.parentNode) {
+            firstScript.parentNode.insertBefore(script, firstScript);
+        }
+    }(window, document, 'acDataLayer', 'ATM-4LqNo7aw1ManPEL_3'));
+  </script>
+
+
+
+  <!-- Описание страницы для поисковиков -->
+  <meta name="description" content="Пример простой HTML-страницы" />
+
+  <!-- Небольшой встроенный CSS для примера -->
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; padding: 0; line-height: 1.45; }
+    header, footer { background:#f3f4f6; padding: 1rem; }
+    main { padding: 1rem; }
+    nav a { margin-right: 0.75rem; text-decoration: none; color: #0366d6; }
+    .container { max-width: 900px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Заголовок сайта</h1>
+      <nav aria-label="Главное меню">
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article>
+        <h2>Заголовок статьи</h2>
+        <p>Короткий абзац текста — здесь вы описываете содержание страницы.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ваша компания</p>
+    </div>
+  </footer>
+
+  <!-- Скрипты: подключите в конце, чтобы не блокировать рендер -->
+  <script>
+    // Пример: простое логирование для проверки
+    console.log('Страница загружена');
+  </script>
+</body>
+</html>
